@@ -32,4 +32,4 @@ jobs:
      name: Mule-Build-Deploy
      uses: shiyamsundark/DevOpsCommon-Mule/.github/workflows/Build_Deploy.yml@main
      with:
-       Repository: ${{ needs.Set_Input_Variables.outputs.Repository }}
+       Repository: ${{ github.repository }}
