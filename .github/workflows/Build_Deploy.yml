@@ -10,6 +10,16 @@ permissions:
     actions: write
     id-token: write
 jobs: 
+  Set_Input_Variables:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          Repository: ${{ github.event.client_payload.message }} 
+          Version: ${{ github.event.client_payload.Version }}
+        run: |
+             echo $Version
+             echo $Repository
+        
   Service1_Deploy:
      name: Mule-Build-Deploy
      uses: shiyamsundark/DevOpsCommon-Mule/.github/workflows/Build_Deploy.yml@main
