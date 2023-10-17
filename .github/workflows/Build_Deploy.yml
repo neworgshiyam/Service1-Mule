@@ -30,6 +30,6 @@ jobs:
   Service1_Deploy:
      needs: Set_Input_Variables
      name: Mule-Build-Deploy
-     uses: shiyamsundark/DevOpsCommon-Mule/.github/workflows/Build_Deploy.yml@main
+     uses: neworgshiyam/DevOpsCommon-Mule/.github/workflows/Build_Deploy.yml@main
      with:
        Repository: ${{ github.repository }}
